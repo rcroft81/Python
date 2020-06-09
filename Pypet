@@ -1,0 +1,36 @@
+print('Welcome to Pypet!')
+
+dog = {
+  'name' : 'Marshmallow',
+  'age' : 3,
+  'weight' : 15.5,
+  'hungry' : True,
+  'photo' : 'U ´x` U',
+  }
+
+shark = {
+  'name' : 'Toothy',
+  'age' : 4,
+  'weight' : 125.5,
+  'hungry' : False,
+  'photo' : '<`)))><',
+}
+
+pets = [dog, shark]
+
+def feed(pet):
+  if pet['hungry'] == True:
+    pet['hungry'] = False
+    pet['weight'] = pet['weight'] + 1
+    print ('omnomom!!')
+  else:
+    print ('The Pypet is not hungry!')
+
+for pet in pets:
+    print ('------------------------------')
+    print ('Hello ' + pet['name'] + '!')
+    print (pet['photo'])
+    print ('Weight: ' + str(pet['weight']))
+    feed(pet)
+    print ('Weight: ' + str(pet['weight']))
+    print ('------------------------------')
